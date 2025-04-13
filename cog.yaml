@@ -1,10 +1,12 @@
 build:
-  gpu: false
-  python_version: "3.9"
+  gpu: true
+  python_version: "3.12"
   python_packages:
-    - "pydantic==1.10.8"
-    - "torch==2.4.1"
+    - PyOpenGL==3.1.7
+    - git+https://github.com/facebookresearch/segment-anything.git@dca509fe793f601edb92606367a655c15ac00fdf
+    - git+https://github.com/gtangg12/samesh.git@9417875e1ad43234a0b66d438dd5dae2b2a1edbe
   run:
     - curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/latest/download/pget_$(uname -s)_$(uname -m)" && chmod +x /usr/local/bin/pget
+
 predict: "predict.py:Predictor"   # Prediction endpoints
 train: "train.py:train"   # Train endpoints
