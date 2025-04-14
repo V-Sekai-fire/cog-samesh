@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/gtangg12/samesh.git
+	branch = main
+	commit = 9417875e1ad43234a0b66d438dd5dae2b2a1edbe
+	parent = 557f110e1fafd84cfe196d086e8fb5209f05eab2
+	method = merge
+	cmdver = 0.4.9
