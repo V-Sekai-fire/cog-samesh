@@ -3,9 +3,11 @@ build:
   system_packages:
     - "libgl1-mesa-glx"
     - "libglib2.0-0"
+    - "libegl1-mesa"
   python_version: "3.12"
   python_packages:
     - PyOpenGL==3.1.7
+    - networkx==2.8.8
     - git+https://github.com/facebookresearch/segment-anything.git@dca509fe793f601edb92606367a655c15ac00fdf
     - git+https://github.com/gtangg12/samesh.git@9417875e1ad43234a0b66d438dd5dae2b2a1edbe
   run:
