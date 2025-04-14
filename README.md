@@ -45,7 +45,7 @@ To test the model locally before deployment:
 pip install cog
 
 # Run a prediction with a local image
-cog predict -i image=@/path/to/your/image.jpg
+cog predict -i mesh_file=@thirdparty/jacket.glb
 ```
 
 ## How to Use Custom Models
