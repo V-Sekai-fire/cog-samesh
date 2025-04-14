@@ -12,12 +12,12 @@ This workflow leverages [SAMesh](https://github.com/gtangg12/samesh) together wi
 
 Below is a comparison of the benefits of SAMesh and SAMPart3D for 3D part segmentation:
 
-| Aspect                 | SAMesh [1][2]                                          | SAMPart3D [3][5]                                                   |
+| Aspect                 | SAMesh                                                 | SAMPart3D                                                          |
 | ---------------------- | ------------------------------------------------------ | ------------------------------------------------------------------ |
 | **Core Approach**      | Zero-shot 2D→3D lifting (SAM-based)                    | Trained MLPs on multiview renders                                  |
 | **Input Requirements** | Works seamlessly with untextured meshes                | Optimized for colored/textured meshes                              |
-| **License**            | MIT [2]                                                | Not explicitly stated [6]                                          |
-| **Accuracy**           | Generalizes well across various scenarios [1]          | Achieves SOTA (72.1 mIoU on PartObjaverse) [5]                     |
+| **License**            | MIT                                                    | Not explicitly stated                                              |
+| **Accuracy**           | Generalizes well across various scenarios              | Achieves SOTA (72.1 mIoU on PartObjaverse)                         |
 | **Compatibility**      | Supports native mesh workflows                         | Leverages color data for enhanced segmentation                     |
 | **Strengths**          | - Quick setup<br>- Handles occlusions<br>- Lightweight | - Delivers precise part boundaries<br>- Supports multi-granularity |
 
