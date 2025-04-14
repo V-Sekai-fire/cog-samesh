@@ -1,5 +1,8 @@
 build:
   gpu: true
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
   python_version: "3.12"
   python_packages:
     - PyOpenGL==3.1.7
