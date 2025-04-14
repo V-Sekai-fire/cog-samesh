@@ -10,23 +10,22 @@ This repository contains the code necessary to deploy the SAMesh model as a serv
 
 This workflow leverages [SAMesh](https://github.com/gtangg12/samesh) together with [HoloPart](https://vast-ai-research.github.io/HoloPart/). We picked SAMesh because it shares the MIT license with HoloPart, ensuring broad use in various projects.
 
-Below is a concise comparison of SAMesh and its next-best alternative (SAMPart3D) for 3D part segmentation:
+Below is a comparison of the benefits of SAMesh and SAMPart3D for 3D part segmentation:
 
-| Aspect                 | SAMesh [1][2]                                         | SAMPart3D [3][5]                                 |
-| ---------------------- | ----------------------------------------------------- | ------------------------------------------------ |
-| **Core Approach**      | Zero-shot 2D→3D lifting (SAM-based)                   | Trained MLPs on multiview renders                |
-| **Input Requirements** | Untextured meshes                                     | Colored/textured meshes                          |
-| **License**            | MIT [2]                                               | Not explicitly stated [6]                        |
-| **Accuracy**           | Good generalization [1]                               | SOTA (72.1 mIoU on PartObjaverse) [5]            |
-| **Compatibility**      | Broad support due to native mesh workflow             | Requires color data                              |
-| **Strengths**          | - Fast setup<br>- Occlusion handling<br>- Lightweight | - Precise part boundaries<br>- Multi-granularity |
-| **Weaknesses**         | - Surface-only segments<br>- Limited detail           | - Complex training pipeline<br>- GPU-heavy       |
+| Aspect                 | SAMesh [1][2]                                          | SAMPart3D [3][5]                                                   |
+| ---------------------- | ------------------------------------------------------ | ------------------------------------------------------------------ |
+| **Core Approach**      | Zero-shot 2D→3D lifting (SAM-based)                    | Trained MLPs on multiview renders                                  |
+| **Input Requirements** | Works seamlessly with untextured meshes                | Optimized for colored/textured meshes                              |
+| **License**            | MIT [2]                                                | Not explicitly stated [6]                                          |
+| **Accuracy**           | Generalizes well across various scenarios [1]          | Achieves SOTA (72.1 mIoU on PartObjaverse) [5]                     |
+| **Compatibility**      | Supports native mesh workflows                         | Leverages color data for enhanced segmentation                     |
+| **Strengths**          | - Quick setup<br>- Handles occlusions<br>- Lightweight | - Delivers precise part boundaries<br>- Supports multi-granularity |
 
-**Why SAMesh + HoloPart is a Superior Combination:**
+**Why SAMesh + HoloPart is a Powerful Combination:**
 
-1. **License Safety**: Both use MIT licenses versus SAMPart3D’s unclear licensing.
-2. **Pipeline Flexibility**: SAMesh segmentation followed by HoloPart amodal completion works seamlessly with untextured assets.
-3. **Performance**: SAMesh’s 2D→3D lifting (around 50ms/frame [1]) suits real-time requirements much better than SAMPart3D’s MLP inference (~300ms [5]).
+1. **License Alignment**: Both use MIT licenses, ensuring compatibility and safety for diverse projects.
+2. **Workflow Synergy**: SAMesh segmentation combined with HoloPart amodal completion provides a robust pipeline for untextured assets.
+3. **Efficiency**: SAMesh’s 2D→3D lifting (around 50ms/frame [1]) is well-suited for real-time applications, complementing HoloPart’s capabilities.
 
 **Example Use Case**:  
 _Vehicle Customization Tool_  

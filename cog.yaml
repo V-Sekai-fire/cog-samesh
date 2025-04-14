@@ -4,11 +4,14 @@ build:
     - "libgl1-mesa-glx"
     - "libglib2.0-0"
     - "libegl1-mesa"
+    - "libglu1-mesa"
+    - "libgl1-mesa-dev"
+    - "libglu1-mesa-dev"
   python_version: "3.12"
   python_packages:
     - PyOpenGL==3.1.7
     - networkx==2.8.8
-    - git+https://github.com/facebookresearch/segment-anything.git@dca509fe793f601edb92606367a655c15ac00fdf
+    - sam2
     - git+https://github.com/gtangg12/samesh.git@9417875e1ad43234a0b66d438dd5dae2b2a1edbe
   run:
     - curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/latest/download/pget_$(uname -s)_$(uname -m)" && chmod +x /usr/local/bin/pget

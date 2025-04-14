@@ -23,7 +23,7 @@ class Predictor(BasePredictor):
             ModelOutput: Contains the path to the segmented mesh in GLB format.
         """
         config = OmegaConf.load("thirdparty/samesh/configs/mesh_segmentation.yaml")
-        segmented_mesh = segment_mesh(mesh_file, config, visualize=False)
-        output_path = self.output_path("segmented_mesh.glb")
+        segmented_mesh = segment_mesh(mesh_file, config, visualize=False)  # Pass sam2_model
+        output_path = "segmented_mesh.glb"
         segmented_mesh.export(output_path)
-        return ModelOutput(segmented_mesh=output_path)
+        return ModelOutput(segmented_mesh=Path(output_path))
